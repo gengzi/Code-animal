@@ -3,10 +3,7 @@
 </p>
 <h1 align="center">Code-animal 学习笔记</h1>
 
-[常用资源]()
+
+[常用资源](https://github.com/gengzi/Code-animal)
 [GitHub](https://github.com/gengzi/Code-animal)
-[开始阅读](#Code-animal)
-
-
-
-
+[开始阅读](#code-animal)
