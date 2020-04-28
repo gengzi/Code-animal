@@ -16,6 +16,36 @@ http://get.daocloud.io/#install-docker-for-mac-windows  国内下载地址
 
 https://www.jianshu.com/p/ae728f8d7636
 
+**特别说明**：
+
+windows中的提供的linux子系统(WLS)，最好不要安装docker环境，因为WLS,还并不能算真正的linux。安装后可能会导致一系列的问题。
+
+（别问我怎么知道的，我花了一天的时间，在本地的WLS上安装并运行docker环境，出现了很多问题。）
+
+[官方的docker ubuntu系统安装文档](https://docs.docker.com/engine/install/ubuntu/)
+
+ubuntu 安装注意几点：
+
+- 查看 ubuntu 的系统版本是否能支持 docker
+
+  ```
+  # 官方文档有说明
+  Ubuntu Eoan 19.10
+  Ubuntu Bionic 18.04（LTS）
+  Ubuntu Xenial 16.04（LTS）
+  ```
+
+- 使用apt-get 下载软件包，最好修改成国内的镜像源
+
+  [修改ubuntu18.04 apt源为阿里云(aliyun)镜像](https://www.cnblogs.com/Eric-Shenblog/p/10862027.html)
+
+- 下载docker 的镜像源，最好也修改成国内的
+
+  ```shell
+  # 添加docker 镜像源
+  $ sudo add-apt-repository deb [arch=amd64] https://mirrors.ustc.edu.cn/docker-ce/linux/ubuntu \
+  $(lsb_release -cs) stable
+  ```
 
 ```shell
 sudo apt-get update  # 更新apt索引
@@ -52,4 +82,7 @@ https://pee6w651.mirror.aliyuncs.com
  
 ```
 
-![1587394323098](index_files/1587394323098.png)
+[![JIrrdJ.png](https://s1.ax1x.com/2020/04/28/JIrrdJ.png)](https://imgchr.com/i/JIrrdJ)
+
+
+

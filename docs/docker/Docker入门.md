@@ -24,7 +24,7 @@
 
   跟虚拟机进行对比，docker容器不会包含操作系统
 
-![J5TEH1.png](F:/img/J5TEH1.png)
+![JIDB4I.png](https://s1.ax1x.com/2020/04/28/JIDB4I.png)
 
 
 * 什么是docker
@@ -67,7 +67,7 @@
 
   层叠的只读文件系统
 
-  ![1588065353723](F:/img/1588065353723.png)
+  [![JIrEad.png](https://s1.ax1x.com/2020/04/28/JIrEad.png)](https://imgchr.com/i/JIrEad)
 
 
 
@@ -81,11 +81,7 @@
 
   写时复制
 
-![1586073454581](../../../img/1586073454581.png)
-
-
-
-
+[![JIrNR0.png](https://s1.ax1x.com/2020/04/28/JIrNR0.png)](https://imgchr.com/i/JIrNR0)
 
 * Docker Registry 仓库
 
@@ -95,7 +91,7 @@
 
 ## docker 操作流程
 
-![1586073576678](../../../img/1586073576678.png)
+[![JIrdMT.png](https://s1.ax1x.com/2020/04/28/JIrdMT.png)](https://imgchr.com/i/JIrdMT)
 
 
 
