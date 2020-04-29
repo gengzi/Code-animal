@@ -67,7 +67,7 @@
 
   层叠的只读文件系统
 
-  [![JIrEad.png](https://s1.ax1x.com/2020/04/28/JIrEad.png)](https://imgchr.com/i/JIrEad)
+  ![JIrEad.png](https://s1.ax1x.com/2020/04/28/JIrEad.png)
 
 
 
@@ -81,17 +81,15 @@
 
   写时复制
 
-[![JIrNR0.png](https://s1.ax1x.com/2020/04/28/JIrNR0.png)](https://imgchr.com/i/JIrNR0)
+![JIrNR0.png](https://s1.ax1x.com/2020/04/28/JIrNR0.png)
 
-* Docker Registry 仓库
-
-  公有 ： Docker hub
+* 公有 ： Docker hub
 
   私有 ： 自己搭建的仓库
 
 ## docker 操作流程
 
-[![JIrdMT.png](https://s1.ax1x.com/2020/04/28/JIrdMT.png)](https://imgchr.com/i/JIrdMT)
+![JIrdMT.png](https://s1.ax1x.com/2020/04/28/JIrdMT.png)
 
 
 
