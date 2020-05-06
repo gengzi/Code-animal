@@ -1,3 +1,3 @@
-* [CountDownLatch 类](./CountDownLatch.md)
+* [CountDownLatch 类](./docs/javathread/CountDownLatch.md)
 
   
