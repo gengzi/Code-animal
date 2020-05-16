@@ -177,8 +177,8 @@ sh   tomcat-restart.sh
 --------------------------------------------------------------------------------------------
 JAVA_OPTS="-Djava.awt.headless=true -Dfile.encoding=UTF-8    -server -Xms1024m -Xmx1024m    -XX:NewSize=512m -XX:MaxNewSize=512m -XX:PermSize=512m   -XX:MaxPermSize=512m -XX:+DisableExplicitGC"
 ---------------------------------------------------------------------------------------------
--Xms – 指定初始化时化的栈内存
--Xmx – 指定最大栈内存
+-Xms – 指定初始化时化的内存
+-Xmx – 指定最大可用内存
  
  
 ```
