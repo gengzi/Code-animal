@@ -1,6 +1,7 @@
 
 * [**java 基础**](./docs/javabase/README.md)
 * [**java 并发编程**](./docs/javathread/README.md)
+* [**设计模式**](./docs/Designpattern/README.md)
 * [**Tomcat**](./docs/tomcat/README.md)
 * Docker
 
