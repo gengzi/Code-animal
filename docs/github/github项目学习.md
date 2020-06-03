@@ -37,3 +37,15 @@ Hollis，阿里巴巴技术专家，51CTO专栏作家，CSDN博客专家，掘�
 
 实战方向的参考文档
 
+## Hutool
+
+地址：https://github.com/looly/hutool
+
+Hutool是一个小而全的Java工具类库，通过静态方法封装，降低相关API的学习成本，提高工作效率，使Java拥有函数式语言般的优雅，让Java语言也可以“甜甜的”。
+
+文档地址：https://www.hutool.cn/docs/#/
+
+做为工程的基础工具包，很不错。 可以参考相关工具类的实现
+
+
+
