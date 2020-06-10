@@ -1,5 +1,6 @@
 1. [java8-lamdba](./docs/java8/java8-lamdba.md)
 2. [java8-stream](./docs/java8/java8-stream.md)
-3. [java8-Optional](./docs/java8/java8-optional.md)
-4. [java8-date](./docs/java8/java8-date.md)
-
+3. [java8-stream示例](./docs/java8/java8-stream示例.md)
+4. [java8-Optional](./docs/java8/java8-optional.md)
+5. [java8-date](./docs/java8/java8-date.md)
+6. [java8-实战](./docs/java8/java8-实战.md)
