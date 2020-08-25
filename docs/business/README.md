@@ -20,6 +20,12 @@
    
    5. [接口鉴权扩展-加密与解密的实践-跨服务的加密解密方式](./docs/business/接口鉴权扩展-加密与解密的实践-跨服务的加密解密方式.md)
    
+   6. [接口鉴权扩展-请使用https](./docs/business/接口鉴权扩展-请使用https.md)
+   
+   7. [接口鉴权扩展-请使用https-制作证书并配置Tomcat](./docs/business/接口鉴权扩展-请使用https-制作证书并配置Tomcat.md)
+   
+   8. [接口鉴权扩展-请使用https-配置nginx](./docs/business/接口鉴权扩展-请使用https-配置nginx.md)
+   
       
    
       
