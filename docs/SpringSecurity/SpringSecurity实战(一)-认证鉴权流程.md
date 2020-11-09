@@ -1,6 +1,6 @@
 [TOC]
 
-## 目标
+## 目标
 
 * 了解 spring security  认证授权流程
 
