@@ -18,7 +18,7 @@
 
 spring security 中文文档：https://www.springcloud.cc/spring-security-zhcn.html
 
-## spring security 实现认证鉴权的流程
+## spring security 实现认证鉴权的流程
 
 （对于流程中的细节，可能不是真正的执行过程，因为我也没有一个代码代码走，但是不影响理解。）
 
@@ -52,7 +52,7 @@ ExceptionTranslationFilter 异常转换过滤器
 
 FilterSecurityInterceptor  使用该类来实现授权
 
-### 认证
+### 认证
 
 security   提供了多种认证方式（用户名密码，oauth 2.0 登陆 等等）。
 
@@ -68,7 +68,7 @@ UserDetails 用户详情类，包含了用户名，密码，权限集合，等�
 
 **如果想实现自定义数据库表实现认证授权，只要把 UserDetailsService ，UserDetails  实现了，就对接上spring security 的认证授权功能。**
 
-### 授权
+### 授权
 
 在获取用户详细时，会将该用户的权限（角色，或者权限），已经设置了。那么用户访问什么内容，就会触发鉴权流程。
 
@@ -100,7 +100,7 @@ security 提供了一个投票决策管理器（AccessDecisionManager），通�
 
 因为对于内容的访问权限，配置的方式有多种，比如，角色（hasRole），权限（hasAuthority），注解形式 配置。那么对于同一个内容的访问权限，就需要大家一起投票，比如角色选民（RoleVoter）认为这个用户有权限，认证选民（AuthenticatedVoter） 认为这个用户没有权限，如果使用 AffirmativeBased  投票机制，那么这个用户就有权限，如果使用 UnanimousBased  投票机制，那么这个用户就没有权限。
 
-### 综上所述
+### 综上所述
 
 使用  spring security  实现认证鉴权，提供了默认实现和接口，功能强大。当然，这只是比较重要的一部分内容，目的对整个流程有一个简单的认识。
 
