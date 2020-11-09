@@ -26,7 +26,7 @@ security  通过认证，鉴权两个步骤来实现，整个认证鉴权过�
 
 参考：[官方文档](https://docs.spring.io/spring-security/site/docs/5.4.1/reference/html5/#servlet-hello-auto-configuration)
 
-![1604826568790](index_files/1604826568790.png)
+![BbJ97n.png](https://s1.ax1x.com/2020/11/09/BbJ97n.png)
 
 当启用 Spring Security 的配置，向每个请求的Servlet容器`Filter`命名的bean注册`springSecurityFilterChain` （spring安全过滤器链）
 
