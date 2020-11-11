@@ -1,6 +1,6 @@
 [TOC]
 
-## 目标
+## 目标
 
 * 了解docker安装和部署jenkins
 
@@ -26,7 +26,7 @@
 
   [linux怎么将一个文件夹链接到另一个文件夹上](https://blog.csdn.net/CSDN_LSD/article/details/78761323)
 
-## Jenkins docker 安装
+## Jenkins docker 安装
 
 jenkins 官方地址：https://www.jenkins.io/zh
 
@@ -141,7 +141,7 @@ jenkins    | 1acc6f86385f4a9aa9de3051105d3286
 
   docker 容器是否正常启动
 
-## Jenkins 的使用
+## Jenkins 的使用
 
 [Jenkins详细教程](https://www.jianshu.com/p/5f671aca2b5a)
 
@@ -155,7 +155,7 @@ jenkins    | 1acc6f86385f4a9aa9de3051105d3286
 
 注意：**对于jenkins 全局配置，jdk maven git 等配置，建议手动下载好，因为网络原因，对某些资源下载速度过于缓慢**，如果你使用的是 docker 启动的jenkins，请先进入jenkins容器中，再下载这些资源并配置。
 
-### 组件安装
+### 组件安装
 
 * 第一种
 
@@ -165,7 +165,7 @@ jenkins    | 1acc6f86385f4a9aa9de3051105d3286
 
   在容器内安装jdk和maven ，应该也是可以的。
 
-### jenkins 中jdk配置
+### jenkins 中jdk配置
 
 如果项目编译的jdk版本运行jenkins容器的java版本一致，也可以直接使用运行jenkins容器的jdk，可以在 系统管理-系统信息 中的 java 中看到，jdk的版本和路径 /opt/java/openjdk/jre 把jre 删掉就是jdk的路径。
 
@@ -196,7 +196,7 @@ echo $JAVA_HOME
 
 ![BWYGgP.png](https://s1.ax1x.com/2020/11/05/BWYGgP.png)
 
-### jenkins 中 maven 安装和配置
+### jenkins 中 maven 安装和配置
 
 ```shell
 # 宿主机
@@ -240,7 +240,7 @@ mvn -v
 
 ![BWYfUJ.png](https://s1.ax1x.com/2020/11/05/BWYfUJ.png)
 
-### jenkins 的git安装
+### jenkins 的git安装
 
 直接使用配置中的自动下载。。没啥问题。
 
@@ -260,7 +260,7 @@ ln -s 源文件位置 目标文件位置
 
  
 
-## 出现的问题以及解决方法
+## 出现的问题以及解决方法
 
 1.  在构建某个工程，出现卡死情况，关闭也关闭不了
 
@@ -312,7 +312,7 @@ ln -s 源文件位置 目标文件位置
 
    [docker重新进入容器时“/etc/profile”中环境变量失效问题的解决](https://blog.csdn.net/dongdong9223/article/details/81094657)
 
-### 小技巧
+### 小技巧
 
 遇到一些问题后，可以优先排查，路径是否正确，防火墙是否关闭，执行目录是否有权限，修改的配置是否生效，可能需要手动重新加载，避免在浪费大量时间后，才发现是个很简单的问题导致的。
 
