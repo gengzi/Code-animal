@@ -198,7 +198,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
 ## 注意
 
-* 在spring 容器中，实现过滤器建议继承 OncePerRequestFilter，OncePerRequestFilter 保证每一个请求只会通过一次当前过滤器，Filter 并不能保证。
+* 在spring 容器中，实现过滤器建议继承 OncePerRequestFilter，OncePerRequestFilter 保证每一个请求只会通过一次当前过滤器，Filter 并不能保证。
 
  
 
