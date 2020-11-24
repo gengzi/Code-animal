@@ -1,12 +1,12 @@
 [TOC]
 
-## 目标
+## 目标
 
-* 了解Spring Security 集成图片验证码
+* 了解Spring Security 集成图片验证码
 
   参考：spring security 实战书籍
 
-## 实现的方式
+## 实现的方式
 
 验证码是区分人与机器的有效方式，几乎所有系统的登陆，都要求输入验证码。
 
@@ -18,13 +18,13 @@ Spring Security 集成图片验证码，有两种方式：
 
 分三篇介绍这两种方法：
 
-## 自定义验证码过滤器（简单方式）
+## 自定义验证码过滤器（简单方式）
 
 业务需求：用户进入登录页面，输入用户名，密码，验证码，进行登录。要求校验用户输入的验证码是否正确，不正确拒绝用户登陆。
 
 思路： 在不使用Spring Security 时，基本做法就是，用户访问登陆页面，页面加载图片验证码，后端生成验证码图片返回前端，并在session 中存储验证码的key 和 value。当用户登陆，后端根据cookie中的sessionid 匹配对应的session ，从session中获取验证码的值，与用户输入的验证码匹配，相等，就认为验证码正确，继续进行下来的用户登陆验证。不相等，就认为验证码输入有误，拒绝登陆。通常也是创建一个过滤器来实现，那么使用Spring Security 后，已知Spring Security 提供了一个过滤器链，进行认证和授权操作。那么自定义一个验证码过滤器，将其加入到这个过滤器链中，当匹配到用户登陆时，立刻对验证码进行校验。成功，就继续执行用户认证操作，不成功，拒绝登陆。并且需要将这个过滤器加入到UsernamePasswordAuthenticationFilter 前面。
 
-### 代码实践
+### 代码实践
 
 项目环境：spring boot 2.2.7 Jpa java8 mysql5.7
 
@@ -36,7 +36,7 @@ Spring Security 集成图片验证码，有两种方式：
 
  
 
-###  生成图片验证码部分
+### 生成图片验证码部分
 
 依赖：pom.xml
 
@@ -53,13 +53,13 @@ Spring Security 集成图片验证码，有两种方式：
 
  
 
-#### 页面
+#### 页面
 
 [**login.html**](https://github.com/gengzi/gengzi_spring_security/blob/master/gengzi_spring_security/src/main/resources/templates/login.html)  直接参考，太长了不粘了
 
 ![DU9iFO.png](https://s3.ax1x.com/2020/11/24/DU9iFO.png)
 
-#### controller 层
+#### controller 层
 
 代码参考：[**CaptchaController.java**](https://github.com/gengzi/gengzi_spring_security/blob/master/gengzi_spring_security/src/main/java/fun/gengzi/gengzi_spring_security/sys/controller/CaptchaController.java)
 
@@ -116,9 +116,9 @@ public void getLoginCode(HttpServletRequest request , HttpServletResponse 
 
  
 
-### 验证“图片验证码”部分
+### 验证“图片验证码”部分
 
-#### 图片过滤器
+#### 图片过滤器
 
 代码参考：[ValidateCodeFilter.java](https://github.com/gengzi/gengzi_spring_security/blob/master/gengzi_spring_security/src/main/java/fun/gengzi/gengzi_spring_security/filter/ValidateCodeFilter.java)
 
@@ -171,7 +171,7 @@ public class ValidateCodeFilter extends OncePerRequestFilter {
  
 ```
 
-#### 核心配置
+#### 核心配置
 
 代码参考：[WebSecurityConfig.java](https://github.com/gengzi/gengzi_spring_security/blob/master/gengzi_spring_security/src/main/java/fun/gengzi/gengzi_spring_security/config/WebSecurityConfig.java)
 
@@ -196,7 +196,7 @@ protected void configure(HttpSecurity http) throws Exception {
 
  
 
-## 注意
+## 注意
 
 * 在spring 容器中，实现过滤器建议继承 OncePerRequestFilter，OncePerRequestFilter 保证每一个请求只会通过一次当前过滤器，Filter 并不能保证。
 
