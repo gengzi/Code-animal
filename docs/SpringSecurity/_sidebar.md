@@ -6,5 +6,7 @@
 
 * [SpringSecurity实战(四)-集成图片验证码-过滤器方式实现](./docs/SpringSecurity/SpringSecurity实战(四)-集成图片验证码-过滤器方式实现.md)
 
+* [SpringSecurity实战(五)-认证流程源码分析](./docs/SpringSecurity/SpringSecurity实战(五)-认证流程源码分析.md)
+
   
 
