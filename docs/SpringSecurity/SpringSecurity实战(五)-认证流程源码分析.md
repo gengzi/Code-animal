@@ -147,6 +147,7 @@
   举例一些认证提供者（provider）：DaoAuthenticationProvider （Dao认证），RememberMeAuthenticationProvider（记住我）等
 
   核心代码展示：
+  
 
   ```java
   public Authentication authenticate(Authentication authentication)
