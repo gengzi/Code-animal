@@ -8,5 +8,9 @@
 
 * [SpringSecurity实战(五)-认证流程源码分析](./docs/SpringSecurity/SpringSecurity实战(五)-认证流程源码分析.md)
 
+* [SpringSecurity实战(六)-集成图形验证码-自定义认证实现](./docs/SpringSecurity/SpringSecurity实战(六)-集成图形验证码-自定义认证实现.md)
+
+* [SpringSecurity实战(七)-对接第三方登陆-流程分析](./docs/SpringSecurity/SpringSecurity实战(七)-对接第三方登陆-流程分析.md)
+
   
 
