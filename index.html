@@ -9,6 +9,8 @@
   <meta name="viewport"
     content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
+  <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
 </head>
 
 <body>
@@ -18,6 +20,10 @@
   <!-- docsify-edit-on-github -->
   <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
   <script>
+  
+    var num = 0;
+	mermaid.initialize({ startOnLoad: false });
+  
     window.$docsify = {
       name: 'Code-animal',
       coverpage: true,
@@ -37,6 +43,18 @@
         // 搜索标题的最大程级, 1 - 6
         depth: 3,
       },
+	   markdown: {
+		renderer: {
+		  code: function(code, lang) {
+			if (lang === "mermaid") {
+			  return (
+				'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+			  );
+			}
+			return this.origin.code.apply(this, arguments);
+		  }
+		}
+	 },
       plugins: [
         EditOnGithubPlugin.create('https://github.com/gengzi/Code-animal/blob/master/')
       ],
