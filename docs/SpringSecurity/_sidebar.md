@@ -12,5 +12,7 @@
 
 * [SpringSecurity实战(七)-对接第三方登陆-流程分析](./docs/SpringSecurity/SpringSecurity实战(七)-对接第三方登陆-流程分析.md)
 
+* [SpringSecurity实战(八)-通用第三方登陆-自定义认证配置实现](./docs/SpringSecurity/SpringSecurity实战(八)-通用第三方登陆-自定义认证配置实现.md)
+
   
 
