@@ -11,6 +11,9 @@
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.css">
   <script src="//cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src="//cdn.bootcdn.net/ajax/libs/flowchart/1.15.0/flowchart.js"></script>
 </head>
 
 <body>
@@ -19,10 +22,54 @@
   </div>
   <!-- docsify-edit-on-github -->
   <script src="//unpkg.com/docsify-edit-on-github/index.js"></script>
+       <script>
+			var flownow = 0;
+			var canvasnow = 0;
+            window.onload = function () {
+			for(var i = 0;i<flownow;i++){
+			var cd = document.getElementById("gengzi_code_"+i),
+                    chart;
+                    var code = cd.value;
+                    chart = flowchart.parse(code);
+                    chart.drawSVG('canvas'+i, {
+                      // 'x': 30,
+                      // 'y': 50,
+                      'line-width': 3,
+                      'maxWidth': 3,//ensures the flowcharts fits within a certian width
+                      'line-length': 50,
+                      'text-margin': 10,
+                      'font-size': 14,
+                      'font': 'normal',
+                      'font-family': 'Helvetica',
+                      'font-weight': 'normal',
+                      'font-color': 'black',
+                      'line-color': 'black',
+                      'element-color': 'black',
+                      'fill': 'white',
+                      'yes-text': 'yes',
+                      'no-text': 'no',
+                      'arrow-end': 'block',
+                      'scale': 1,
+                      'symbols': {
+                        'start': {
+                          'font-color': 'red',
+                          'element-color': 'green',
+                          'fill': 'yellow'
+                        },
+                        'end':{
+                          'class': 'end-element'
+                        }
+                      }
+                    });
+			}
+            };
+            
+        </script>
   <script>
   
     var num = 0;
 	mermaid.initialize({ startOnLoad: false });
+
   
     window.$docsify = {
       name: 'Code-animal',
@@ -49,6 +96,11 @@
 			if (lang === "mermaid") {
 			  return (
 				'<div class="mermaid">' + mermaid.render('mermaid-svg-' + num++, code) + "</div>"
+			  );
+			}
+			if (lang === "flow") {
+			  return (
+				'<div><textarea id="gengzi_code_'+(flownow++)+'" style="width: 100%;display:none;" rows="11"  >' + code + "</textarea></div><div id='canvas"+(canvasnow++)+"'></div>"
 			  );
 			}
 			return this.origin.code.apply(this, arguments);
