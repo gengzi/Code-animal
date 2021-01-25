@@ -29,4 +29,5 @@
   9. [接口鉴权扩展-请使用https-配置nginx](./docs/business/接口鉴权扩展-请使用https-配置nginx.md)
 * 工具篇
   1. [常用工具实践-HTML转PDF](./docs/business/常用工具实践-HTML转PDF.md)
+  2. [Docsify支持Markdown多种流程图](./docs/business/Docsify支持Markdown多种流程图.md)
 
