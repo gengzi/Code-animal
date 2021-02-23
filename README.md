@@ -15,6 +15,7 @@
 - [**SpringSecurity**](./docs/SpringSecurity/README.md)
 - [**Redis**](./docs/Redis/README.md)
 - [**github**](./docs/github/README.md)
+- [**日志追踪**](./docs/logtrack/README.md)
 - [**每日福利**](./docs/fuli/README.md)
 
 
